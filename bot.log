@@ -4,3 +4,254 @@
 2025-06-30 13:55:42,873 - INFO - User 923869729 (grndsard) clicked: yes_more
 2025-06-30 13:56:01,635 - INFO - User 923869729 (grndsard) clicked: 2_12
 2025-06-30 13:56:07,697 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-06-30 15:04:05,148 - INFO - User 1391675035 (Unknown) started the bot
+2025-06-30 15:04:06,025 - INFO - Welcome message sent to user 1391675035 in en language
+2025-06-30 15:04:14,275 - INFO - User 1391675035 (Unknown) clicked: 2_1
+2025-06-30 15:08:33,367 - INFO - User 923869729 (grndsard) started the bot
+2025-06-30 15:08:33,840 - INFO - Welcome message sent to user 923869729 in en language
+2025-06-30 15:09:04,875 - INFO - User 923869729 (grndsard) clicked: 7_2
+2025-06-30 15:09:13,129 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-06-30 15:44:38,916 - INFO - User 923869729 (grndsard) started the bot
+2025-06-30 15:44:39,757 - INFO - Welcome message sent to user 923869729 in en language
+2025-06-30 15:45:00,889 - INFO - User 923869729 (grndsard) clicked: 3_3
+2025-06-30 15:45:10,452 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-04 11:10:17,764 - CRITICAL - Bot crashed: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 382, in <module>
+    bot.polling(none_stop=True)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1040, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+                                                          ^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 273, in user
+    self._user = self.get_me()
+                 ^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1236, in get_me
+    result = apihelper.get_me(self.token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 196, in get_me
+    return _make_request(token, method_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+2025-07-04 15:16:35,344 - CRITICAL - Bot crashed: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 382, in <module>
+    bot.polling(none_stop=True)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1040, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+                                                          ^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 273, in user
+    self._user = self.get_me()
+                 ^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1236, in get_me
+    result = apihelper.get_me(self.token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 196, in get_me
+    return _make_request(token, method_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+2025-07-09 14:29:58,045 - CRITICAL - Bot crashed: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 382, in <module>
+    bot.polling(none_stop=True)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1040, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+                                                          ^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 273, in user
+    self._user = self.get_me()
+                 ^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1236, in get_me
+    result = apihelper.get_me(self.token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 196, in get_me
+    return _make_request(token, method_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+2025-07-24 09:11:44,477 - CRITICAL - Bot crashed: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 514, in <module>
+    bot.polling(none_stop=True)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1040, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+                                                          ^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 273, in user
+    self._user = self.get_me()
+                 ^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1236, in get_me
+    result = apihelper.get_me(self.token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 196, in get_me
+    return _make_request(token, method_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+2025-07-24 09:14:35,446 - INFO - RupaGanti Bot starting...
+2025-07-24 09:14:36,070 - CRITICAL - Bot crashed: A request to the Telegram API was unsuccessful. Error code: 404. Description: Not Found
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 515, in <module>
+    bot.polling(none_stop=True)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1040, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+                                                          ^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 273, in user
+    self._user = self.get_me()
+                 ^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1236, in get_me
+    result = apihelper.get_me(self.token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 196, in get_me
+    return _make_request(token, method_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 404. Description: Not Found
+2025-07-24 09:15:47,643 - INFO - RupaGanti Bot starting...
+2025-07-24 09:15:48,196 - CRITICAL - Bot crashed: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 529, in <module>
+    bot.polling(none_stop=True, interval=1, timeout=20)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1040, in polling
+    logger.info('Starting your bot with username: [@%s]', self.user.username)
+                                                          ^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 273, in user
+    self._user = self.get_me()
+                 ^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1236, in get_me
+    result = apihelper.get_me(self.token)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 196, in get_me
+    return _make_request(token, method_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 401. Description: Unauthorized
+2025-07-24 09:16:21,029 - INFO - RupaGanti Bot starting...
+2025-07-24 09:16:26,803 - ERROR - Threaded polling exception: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-07-24 09:16:26,804 - ERROR - Exception traceback:
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1073, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "C:\Python311\Lib\site-packages\telebot\util.py", line 108, in raise_exceptions
+    raise self.exception_info
+  File "C:\Python311\Lib\site-packages\telebot\util.py", line 90, in run
+    task(*args, **kwargs)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 649, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 623, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 321, in get_updates
+    return _make_request(token, method_url, params=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 162, in _make_request
+    json_result = _check_result(method_name, result)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\site-packages\telebot\apihelper.py", line 189, in _check_result
+    raise ApiTelegramException(method_name, result, result_json)
+telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 409. Description: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+
+2025-07-24 09:16:32,500 - INFO - RupaGanti Bot starting...
+2025-07-24 09:16:51,367 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 09:16:52,452 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 09:17:26,210 - INFO - User 923869729 (grndsard) clicked: 8_1
+2025-07-24 09:17:27,938 - ERROR - PDF to Word conversion error: [WinError 32] The process cannot access the file because it is being used by another process: 'temp/temp_1.pdf'
+2025-07-24 09:17:35,191 - INFO - User 923869729 (grndsard) clicked: yes_more
+2025-07-24 09:18:48,685 - INFO - User 923869729 (grndsard) clicked: 4_2
+2025-07-24 09:18:53,033 - INFO - User 923869729 (grndsard) clicked: 2_3
+2025-07-24 09:19:03,432 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-24 09:36:52,334 - INFO - Secure RupaGanti Bot starting with enhanced encryption...
+2025-07-24 09:36:52,335 - INFO - Deleted temp file: temp\converted_1.docx
+2025-07-24 09:36:52,335 - ERROR - Could not delete file temp\converted_1.docx: [WinError 2] The system cannot find the file specified: 'temp\\converted_1.docx'
+2025-07-24 09:36:52,336 - INFO - Deleted temp file: temp\temp_1.pdf
+2025-07-24 09:36:52,336 - ERROR - Could not delete file temp\temp_1.pdf: [WinError 2] The system cannot find the file specified: 'temp\\temp_1.pdf'
+2025-07-24 09:36:52,336 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-24 09:37:09,807 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 09:37:10,980 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 09:37:59,018 - INFO - File securely stored: Nobis_043_NB_GM_KPU_HCM_1_III_2025_01_Perihal_Undangan_Pelatihan.pdf → 30bdf87b-243f-43d2-b84f-4bc6bb97eaa2.pdf
+2025-07-24 09:38:01,829 - INFO - User 923869729 (grndsard) clicked: 8_4
+2025-07-24 09:38:04,075 - WARNING - Could not delete temp PDF: [WinError 32] The process cannot access the file because it is being used by another process: 'temp/temp_4_1753324682.pdf'
+2025-07-24 09:38:04,077 - INFO - Original file deleted after processing: files/30bdf87b-243f-43d2-b84f-4bc6bb97eaa2.pdf
+2025-07-24 09:38:40,723 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-24 09:43:26,483 - INFO - Secure RupaGanti Bot starting with enhanced encryption...
+2025-07-24 09:43:26,489 - INFO - Deleted temp file: temp\temp_4_1753324682.pdf
+2025-07-24 09:43:26,492 - INFO - Database cleaned on startup
+2025-07-24 09:43:26,492 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-24 09:43:43,110 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 09:43:44,268 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 09:44:10,697 - INFO - File securely stored: Justi-Kebutuhan_Pembelian_Template_Hyper_signed.pdf → c4da0452-d4e2-48ff-a316-52eb3187ae1a.pdf
+2025-07-24 09:44:13,453 - INFO - User 923869729 (grndsard) clicked: 8_1
+2025-07-24 09:44:15,095 - ERROR - PDF to Word conversion error: [WinError 267] The directory name is invalid: 'C:\\Users\\Grandis\\AppData\\Local\\Temp\\tmpw10eahj3\\temp_1.pdf'
+2025-07-24 09:50:50,540 - INFO - Secure RupaGanti Bot starting with enhanced encryption...
+2025-07-24 09:50:50,544 - INFO - Database cleaned on startup
+2025-07-24 09:50:50,545 - INFO - Startup cleanup: Deleted files\c4da0452-d4e2-48ff-a316-52eb3187ae1a.pdf
+2025-07-24 09:50:50,545 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-24 09:50:54,746 - INFO - User 923869729 (grndsard) clicked: yes_more
+2025-07-24 09:51:08,422 - INFO - File securely stored: FREQUENTLY ASKED QUESTIONS (FAQ) DISKUSI UMUM.pdf → f87f47d3-ef52-4c69-a49a-6c7934df005a.pdf
+2025-07-24 09:51:18,487 - INFO - User 923869729 (grndsard) clicked: 8_1
+2025-07-24 09:51:18,505 - ERROR - PDF to Word conversion error: cannot access local variable 'PDF_TO_DOCX_AVAILABLE' where it is not associated with a value
+2025-07-24 09:54:50,083 - INFO - Secure RupaGanti Bot starting with enhanced encryption...
+2025-07-24 09:54:50,097 - INFO - Database cleaned on startup
+2025-07-24 09:54:50,100 - INFO - Startup cleanup: Deleted files\f87f47d3-ef52-4c69-a49a-6c7934df005a.pdf
+2025-07-24 09:54:50,100 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-24 09:54:53,056 - INFO - User 923869729 (grndsard) clicked: yes_more
+2025-07-24 09:55:36,410 - INFO - File securely stored: an ATS CV - Template.docx.pdf → 85112017-43e3-4724-8a60-27ce31ae7dc3.pdf
+2025-07-24 09:55:39,290 - INFO - User 923869729 (grndsard) clicked: 8_1
+2025-07-24 09:55:41,685 - ERROR - Failed to clean up temp directory: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\Grandis\\AppData\\Local\\Temp\\rupaganti_nfcr_jbo\\temp_1.pdf'
+2025-07-24 09:55:42,410 - INFO - Original file deleted after processing: files/85112017-43e3-4724-8a60-27ce31ae7dc3.pdf
+2025-07-24 10:54:23,851 - INFO - Secure RupaGanti Bot starting with enhanced encryption...
+2025-07-24 10:54:23,864 - INFO - Database cleaned on startup
+2025-07-24 10:54:23,865 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-24 11:05:56,415 - INFO - Secure RupaGanti Bot starting with enhanced encryption...
+2025-07-24 11:05:56,418 - INFO - Database cleaned on startup
+2025-07-24 11:05:56,419 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-24 11:06:31,904 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 11:06:34,762 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 11:07:40,571 - INFO - File securely stored: Update Pricelist Gadget Terbaru Kisel.pdf → e533db8b-7e8d-4845-9a3a-6fbb79dedfc4.pdf
+2025-07-24 11:09:42,856 - INFO - Deleted expired file: files/e533db8b-7e8d-4845-9a3a-6fbb79dedfc4.pdf
+2025-07-24 11:17:13,289 - INFO - User 923869729 (grndsard) clicked: start_over
+2025-07-24 11:18:14,550 - INFO - File securely stored: Update Pricelist Gadget Terbaru Kisel.pdf → c1e46415-eb5d-4544-9182-0f3d2fa81862.pdf
+2025-07-24 11:18:24,638 - INFO - User 923869729 (grndsard) clicked: 5_1
+2025-07-24 11:18:27,787 - INFO - Original file deleted after processing: files/c1e46415-eb5d-4544-9182-0f3d2fa81862.pdf
+2025-07-24 11:24:51,207 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-24 11:24:55,932 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 11:24:56,785 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 11:25:56,166 - INFO - File securely stored: Update Pricelist Gadget Terbaru Kisel.pdf → 80f7ab27-5d64-4b8b-bd22-5b324087d475.pdf
+2025-07-24 11:26:02,942 - INFO - User 923869729 (grndsard) clicked: 5_2
+2025-07-24 11:26:06,199 - INFO - Original file deleted after processing: files/80f7ab27-5d64-4b8b-bd22-5b324087d475.pdf
+2025-07-24 11:26:19,313 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-24 11:41:00,483 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 11:41:03,806 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 11:41:31,970 - INFO - File securely stored: Nobis_043_NB_GM_KPU_HCM_1_III_2025_01_Perihal_Undangan_Pelatihan.pdf → faf522f7-b497-4f52-8641-6b6a6c0af8ff.pdf
+2025-07-24 11:43:36,588 - INFO - Deleted expired file: files/faf522f7-b497-4f52-8641-6b6a6c0af8ff.pdf
+2025-07-24 11:44:20,115 - INFO - User 923869729 (grndsard) clicked: start_over
+2025-07-24 11:55:21,188 - INFO - User 923869729 (grndsard) started the bot
+2025-07-24 11:55:24,495 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-24 11:55:59,721 - INFO - File securely stored: 20250220092521394.pdf → 231b0bf7-39ce-4505-b2e0-628aa104a884.pdf
+2025-07-24 11:56:08,060 - INFO - User 923869729 (grndsard) clicked: 5_1
+2025-07-24 11:56:10,077 - INFO - Original file deleted after processing: files/231b0bf7-39ce-4505-b2e0-628aa104a884.pdf
+2025-07-24 11:58:44,065 - INFO - User 923869729 (grndsard) clicked: no_thanks
