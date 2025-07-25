@@ -87,7 +87,7 @@ SESSION_TIMEOUT_SECONDS = 120  # 2-minute countdown timer for security
 MIN_COMPRESSION_TARGET = 0.5  # Target at least 50% file size reduction
 
 # Replace with your valid Telegram bot token
-BOT_TOKEN = "*****"
+BOT_TOKEN = "****"
 
 # Configure telebot with proper request settings
 telebot.apihelper.RETRY_ON_ERROR = True
@@ -105,7 +105,7 @@ user_activity = {}
 # Language translations
 LANG = {
     'en': {
-        'welcome': "🎉 Hi! I'm **RupaGanti** by Grands — I can help you convert or compress your files!\n\n✨ What I can do:\n📸 **Images**: JPG ↔️ PNG ↔️ WebP ↔️ BMP\n📄 **Documents**: PDF ↔️ Word, PDF compression\n🎵 **Audio**: MP3, WAV, FLAC\n🎬 **Video**: MP4, AVI, MOV\n🗜️ **Compress**: Reduce file size\n\n🔒 Your files are encrypted and will be deleted within 2 minutes if not processed — your data stays safe!\n\nJust send me a file and I'll show you the options! 🚀",
+        'welcome': "🎉 Hi! I'm **RupaGanti** by Grands — I help you convert or compress files securely!\n\n📸 **Images**: JPG, PNG, WebP, BMP, TIFF, etc.\n📄 **Documents**: PDF, DOCX, XLSX, PPTX, TXT, etc.\n🎵 **Audio**: MP3, WAV, FLAC, AAC, M4A\n🎬 **Video**: MP4, AVI, MOV, MKV, WMV\n\n🔐 Your files are encrypted & deleted automatically after 2 minutes for your safety.\n\nJust send me a file and I'll show you the options! 🚀",
         'first_welcome': "👋 Welcome to RupaGanti by Grands!\n\nI can help you convert or compress your files safely 🔐✨\n\nTap the button below to get started 👇",
         'start_button': "🔁 Start",
         'inactivity_reminder': "👀 Are you still there?\nLet me know if you still need help!",
@@ -134,7 +134,30 @@ LANG = {
         'countdown': '⏳ {}:{:02d} remaining',
         'compression_result': '✅ Compression successful: {:.1f} MB → {:.1f} MB',
         'already_optimized': '⚠️ This file is already optimized and cannot be compressed further without losing quality.',
-        'files_deleted': '🗑️ All files have been securely deleted to protect your data.'
+        'files_deleted': '🗑️ All files have been securely deleted to protect your data.',
+        'file_received': 'received!\n\nChoose what you\'d like to do:',
+        'error_processing': '❌ Sorry, there was a problem processing your file.',
+        'error_upload': '❌ File upload failed. Please try uploading your file again.',
+        'error_general': '❌ Something went wrong. Please try again.',
+        'back_to_start': '🔁 Back to Start',
+        'try_again': 'Please try uploading your file again or contact support if the problem persists.',
+        'convert_to_pdf': '📄 Convert to PDF',
+        'what_to_do': 'What would you like to do?',
+        'file_ready': '🎉 Done! Your file is ready. Download below 👇',
+        'security_reminder': '🔒 Your files are encrypted and will be deleted within 2 minutes if not processed — your data stays safe!',
+        'oops_error': '⚠️ Oops! Something went wrong. Please try again or start over.',
+        'converting_to_pdf': '📄 Converting to PDF...',
+        'pdf_conversion_success': '✅ Word document converted to PDF successfully!',
+        'pdf_conversion_failed': '❌ PDF conversion failed. Please try again with a different file.',
+        'unsupported_format': '⚠️ Unsupported file format. Please upload one of the supported types:\nImages: JPG, PNG, WebP, BMP, etc.\nDocuments: DOCX, XLSX, PPTX, PDF, etc.\nAudio/Video: MP3, MP4, AVI, etc.',
+        'convert_document': '📄 Convert to PDF',
+        'compress_document': '🗜️ Compress to ZIP',
+        'image_options': 'What would you like to do with your image?',
+        'document_options': 'What would you like to do with your document?',
+        'media_options': 'What would you like to do with your media file?',
+        'convert_to_mp4': '🎬 Convert to MP4',
+        'convert_to_mp3': '🎵 Convert to MP3',
+        'cancel': '❌ Cancel'
     },
     'id': {
         'welcome': "🎉 Hai! Saya **RupaGanti** by Grands — saya bisa membantu mengkonversi atau mengompres file Anda!\n\n✨ Yang bisa saya lakukan:\n📸 **Gambar**: JPG ↔ PNG ↔ WebP ↔ BMP\n📄 **Dokumen**: Kompresi PDF\n🎵 **Audio**: MP3, WAV, FLAC\n🎬 **Video**: MP4, AVI, MOV\n🗜️ **Kompres**: Kurangi ukuran file\n\nKirim file dan saya akan tunjukkan pilihan! 🚀",
@@ -216,16 +239,22 @@ init_db()
 
 def get_file_type(filename):
     ext = filename.lower().split('.')[-1] if '.' in filename else ''
-    types = {
+    file_types = {
         'image': ['jpg', 'jpeg', 'png', 'webp', 'bmp', 'gif', 'tiff'],
-        'document': ['pdf', 'doc', 'docx', 'txt', 'rtf'],
+        'document': ['pdf', 'doc', 'docx', 'txt', 'rtf', 'xlsx', 'xls', 'pptx', 'ppt'],
         'video': ['mp4', 'avi', 'mov', 'mkv', 'wmv'],
         'audio': ['mp3', 'wav', 'flac', 'aac', 'm4a']
     }
-    for category, extensions in types.items():
+    
+    for category, extensions in file_types.items():
         if ext in extensions:
             return category, ext
-    return 'other', ext
+    return 'unsupported', ext
+
+def is_supported_file(filename):
+    """Check if file is in any supported format"""
+    file_type, ext = get_file_type(filename)
+    return file_type != 'unsupported'
 
 def encrypt_file_aes(file_data):
     """Encrypt file data using AES-256 encryption with hardware acceleration"""
@@ -642,6 +671,26 @@ def send_first_welcome(chat_id, lang='en'):
     except Exception as e:
         logger.error(f"Error sending first welcome: {str(e)}")
 
+def send_error_with_restart(chat_id, error_message, lang='en'):
+    """Send error message with Back to Start button"""
+    try:
+        markup = types.InlineKeyboardMarkup()
+        markup.add(types.InlineKeyboardButton(LANG[lang]['back_to_start'], callback_data="start_bot"))
+        
+        full_message = f"{error_message}\n\n{LANG[lang]['try_again']}"
+        bot.send_message(chat_id, full_message, reply_markup=markup)
+    except Exception as e:
+        logger.error(f"Error sending error message: {str(e)}")
+
+def cleanup_failed_file(file_path):
+    """Clean up a failed or corrupted file"""
+    try:
+        if file_path and os.path.exists(file_path):
+            os.remove(file_path)
+            logger.info(f"Cleaned up failed file: {file_path}")
+    except Exception as e:
+        logger.error(f"Failed to clean up file {file_path}: {str(e)}")
+
 def start_inactivity_timer(user_id, chat_id, lang='en'):
     """Start inactivity timer for a user"""
     # Update user's last activity time
@@ -891,14 +940,26 @@ def handle_file(message):
         
         # Update status message with file received format
         try:
-            bot.edit_message_text(f"📁 {original_name} {LANG[lang]['file_received']}", message.chat.id, status_msg.message_id)
-        except:
+            if not LANG[lang].get('file_received'):
+                LANG[lang]['file_received'] = 'received!\n\nChoose what you\'d like to do:'
+            success_message = f"📁 {original_name} {LANG[lang]['file_received']}\n✅ File successfully encrypted."
+            bot.edit_message_text(success_message, message.chat.id, status_msg.message_id)
+        except Exception as e:
+            logger.error(f"Error updating status message: {str(e)}")
             pass
             
         file_type, ext = get_file_type(original_name)
         markup = types.InlineKeyboardMarkup()
         
+        # Check if file format is supported
+        if not is_supported_file(original_name):
+            send_error_with_restart(message.chat.id, LANG[lang]['unsupported_format'], lang)
+            cleanup_failed_file(file_path)
+            return
+        
+        # Create contextual menu based on file type
         if file_type == 'image':
+            options_text = LANG[lang]['image_options']
             if ext != 'jpg':
                 markup.add(types.InlineKeyboardButton(LANG[lang]['convert_jpg'], callback_data=f"1_{db_id}"))
             if ext != 'png':
@@ -908,25 +969,53 @@ def handle_file(message):
             markup.add(types.InlineKeyboardButton(LANG[lang]['compress_img'], callback_data=f"4_{db_id}"))
         
         elif file_type == 'document':
+            options_text = LANG[lang]['document_options']
             if ext == 'pdf':
                 markup.add(types.InlineKeyboardButton(LANG[lang]['compress_pdf'], callback_data=f"5_{db_id}"))
                 markup.add(types.InlineKeyboardButton('📄 Convert to Word', callback_data=f"8_{db_id}"))
-            elif ext == 'docx':
-                markup.add(types.InlineKeyboardButton('📄 Convert to PDF', callback_data=f"9_{db_id}"))
+            else:
+                markup.add(types.InlineKeyboardButton(LANG[lang]['convert_document'], callback_data=f"convert_pdf_{db_id}"))
+                markup.add(types.InlineKeyboardButton(LANG[lang]['compress_document'], callback_data=f"compress_zip_{db_id}"))
         
         elif file_type == 'video':
+            options_text = LANG[lang]['media_options']
+            markup.add(types.InlineKeyboardButton(LANG[lang]['convert_to_mp4'], callback_data=f"video_mp4_{db_id}"))
             markup.add(types.InlineKeyboardButton(LANG[lang]['extract_mp3'], callback_data=f"6_{db_id}"))
+            markup.add(types.InlineKeyboardButton(LANG[lang]['zip_file'], callback_data=f"7_{db_id}"))
         
-        markup.add(types.InlineKeyboardButton(LANG[lang]['zip_file'], callback_data=f"7_{db_id}"))
+        elif file_type == 'audio':
+            options_text = LANG[lang]['media_options']
+            markup.add(types.InlineKeyboardButton(LANG[lang]['convert_to_mp3'], callback_data=f"audio_mp3_{db_id}"))
+            markup.add(types.InlineKeyboardButton(LANG[lang]['zip_file'], callback_data=f"7_{db_id}"))
+        
+        # Add cancel button for all types
+        markup.add(types.InlineKeyboardButton(LANG[lang]['cancel'], callback_data=f"cancel_{db_id}"))
 
-        reply_msg = bot.reply_to(message, f"📁 {original_name} {LANG[lang]['file_received']}", 
-                    reply_markup=markup)
+        # Create the file received message with proper formatting
+        if not LANG[lang].get('file_received'):
+            LANG[lang]['file_received'] = 'received!\n\nChoose what you\'d like to do:'
+            
+        # Create contextual file message based on file type
+        file_message = f"📁 {original_name} {LANG[lang]['file_received']}\n✅ Encrypted.\n\n{options_text}\n\n{LANG[lang]['security_reminder']}"
+        
+        reply_msg = bot.reply_to(message, file_message, reply_markup=markup)
         
         # Start the session timer
         start_session_timer(message.chat.id, file_path, db_id, lang)
 
     except Exception as e:
-        bot.reply_to(message, f"❌ Error: {str(e)}")
+        logger.error(f"File handling error for user {message.from_user.id}: {str(e)}")
+        lang = get_user_lang(message.from_user.language_code)
+        
+        # Clean up any partially created files
+        try:
+            if 'file_path' in locals():
+                cleanup_failed_file(file_path)
+        except:
+            pass
+            
+        # Send user-friendly error message with restart button
+        send_error_with_restart(message.chat.id, LANG[lang]['error_upload'], lang)
 
 @bot.callback_query_handler(func=lambda call: True)
 def callback_handler(call):
@@ -946,6 +1035,17 @@ def callback_handler(call):
             bot.send_message(call.message.chat.id, LANG[lang]['welcome'], parse_mode='Markdown')
             bot.answer_callback_query(call.id)
             return
+        
+        # Handle document conversion callbacks
+        if call.data.startswith("convert_pdf_"):
+            db_id = call.data.split('_')[2]
+            # Redirect to Word to PDF conversion (action 9)
+            call.data = f"9_{db_id}"
+        
+        elif call.data.startswith("compress_zip_"):
+            db_id = call.data.split('_')[2]
+            # Redirect to ZIP compression (action 7)
+            call.data = f"7_{db_id}"
         
         # Cancel session timer when user takes action
         if user_id in active_sessions:
@@ -1013,7 +1113,12 @@ def callback_handler(call):
             
         except Exception as e:
             logger.error(f"Failed to read or decrypt file {file_path}: {str(e)}")
-            bot.send_message(call.message.chat.id, "⚠️ Sorry, there was a problem processing your file. Please try uploading it again.")
+            
+            # Clean up the corrupted file
+            cleanup_failed_file(file_path)
+            
+            # Send user-friendly error with restart button
+            send_error_with_restart(call.message.chat.id, LANG[lang]['error_processing'], lang)
             bot.answer_callback_query(call.id, "File processing error")
             return
         
@@ -1391,98 +1496,121 @@ def callback_handler(call):
                 
             except Exception as e:
                 logger.error(f"PDF to Word conversion error: {str(e)}")
-                bot.send_message(call.message.chat.id, f"❌ Conversion failed: {str(e)}")
+                send_error_with_restart(call.message.chat.id, f"❌ PDF to Word conversion failed. {LANG[lang]['try_again']}", lang)
         
         # Word to PDF conversion
         elif action == "9":
             try:
-                # Create a secure temporary directory that will be automatically cleaned up
+                bot.edit_message_text(LANG[lang]['converting_to_pdf'], call.message.chat.id, status_msg.message_id)
+            except:
+                pass
+                
+            try:
                 temp_dir = tempfile.mkdtemp(prefix="rupaganti_")
+                temp_docx = os.path.join(temp_dir, f"input_{db_id}.docx")
+                output_pdf = os.path.join(temp_dir, f"output_{db_id}.pdf")
+                
                 try:
-                    # Create temp DOCX file with unique name - use normalized path
-                    temp_docx = os.path.normpath(os.path.join(temp_dir, f"temp_{db_id}.docx"))
+                    # Save DOCX file
                     with open(temp_docx, 'wb') as f:
                         f.write(file_data)
                     
-                    # Output PDF path - use normalized path
-                    output_pdf = os.path.normpath(os.path.join(temp_dir, f"converted_{db_id}.pdf"))
+                    conversion_success = False
                     
-                    # Try to use docx2pdf if available (better quality)
-                    conversion_method = "basic"
+                    # Try docx2pdf first
                     try:
                         import importlib.util
                         if importlib.util.find_spec("docx2pdf"):
                             from docx2pdf import convert
                             convert(temp_docx, output_pdf)
-                            conversion_method = "enhanced"
-                        else:
-                            raise ImportError("docx2pdf not available")
-                    except Exception as docx_error:
-                        logger.error(f"Enhanced Word to PDF conversion failed: {str(docx_error)}")
-                        # Fallback to basic conversion
-                        from docx import Document
-                        from reportlab.pdfgen import canvas
-                        from reportlab.lib.pagesizes import letter
-                        
-                        # Extract text from DOCX
-                        doc = Document(temp_docx)
-                        text_content = []
-                        for para in doc.paragraphs:
-                            text_content.append(para.text)
-                        
-                        # Create PDF using reportlab
-                        c = canvas.Canvas(output_pdf, pagesize=letter)
-                        width, height = letter
-                        y = height - 40  # Starting position from top
-                        
-                        for line in text_content:
-                            if line.strip():  # Skip empty lines
-                                # Add text to PDF
-                                c.drawString(40, y, line)
-                                y -= 15  # Move down for next line
-                                
-                                # If we reach bottom of page, create new page
-                                if y < 40:
-                                    c.showPage()
-                                    y = height - 40
-                        
-                        c.save()
-                        conversion_method = "basic"
+                            if os.path.exists(output_pdf) and os.path.getsize(output_pdf) > 0:
+                                conversion_success = True
+                    except Exception as e:
+                        logger.warning(f"docx2pdf failed: {str(e)}")
                     
-                    # Read file content before sending
+                    # Fallback to basic conversion for all document types
+                    if not conversion_success:
+                        try:
+                            if ext in ['docx', 'doc']:
+                                from docx import Document
+                                doc = Document(temp_docx)
+                                text_content = [para.text for para in doc.paragraphs if para.text.strip()]
+                            elif ext in ['txt', 'rtf']:
+                                with open(temp_docx, 'r', encoding='utf-8', errors='ignore') as f:
+                                    text_content = f.readlines()
+                            elif ext in ['xlsx', 'xls']:
+                                try:
+                                    import pandas as pd
+                                    df = pd.read_excel(temp_docx)
+                                    text_content = [df.to_string()]
+                                except:
+                                    text_content = ["Excel file content (conversion limited)"]
+                            elif ext in ['pptx', 'ppt']:
+                                try:
+                                    from pptx import Presentation
+                                    prs = Presentation(temp_docx)
+                                    text_content = []
+                                    for slide in prs.slides:
+                                        for shape in slide.shapes:
+                                            if hasattr(shape, "text"):
+                                                text_content.append(shape.text)
+                                except:
+                                    text_content = ["PowerPoint file content (conversion limited)"]
+                            else:
+                                text_content = ["Document content"]
+                            
+                            # Create PDF with extracted content
+                            from reportlab.pdfgen import canvas
+                            from reportlab.lib.pagesizes import letter
+                            
+                            c = canvas.Canvas(output_pdf, pagesize=letter)
+                            width, height = letter
+                            y = height - 50
+                            
+                            for line in text_content:
+                                if line and line.strip():
+                                    text = line.strip()[:80]  # Limit line length
+                                    c.drawString(50, y, text)
+                                    y -= 20
+                                    if y < 50:
+                                        c.showPage()
+                                        y = height - 50
+                            
+                            c.save()
+                            conversion_success = True
+                        except Exception as e:
+                            logger.error(f"Fallback conversion failed: {str(e)}")
+                    
+                    if not conversion_success:
+                        raise Exception("Conversion failed")
+                    
+                    # Send PDF
                     with open(output_pdf, 'rb') as f:
                         file_content = f.read()
                     
-                    # Send as BytesIO to avoid file access issues
                     output = BytesIO(file_content)
-                    output.name = "converted.pdf"
-                    bot.send_document(call.message.chat.id, output, visible_file_name="converted.pdf")
+                    filename = original_name.rsplit('.', 1)[0] + '.pdf'
+                    bot.send_document(call.message.chat.id, output, visible_file_name=filename)
                     
-                    # Clean up temporary directory manually
+                    bot.send_message(call.message.chat.id, LANG[lang]['pdf_conversion_success'])
+                    bot.send_message(call.message.chat.id, LANG[lang]['file_ready'])
+                    
+                    file_size_mb = get_file_size_mb(file_content)
+                    bot.send_message(call.message.chat.id, f"📄 PDF created ({file_size_mb:.1f} MB)")
+                    
                 finally:
                     try:
                         shutil.rmtree(temp_dir)
-                    except Exception as cleanup_error:
-                        logger.error(f"Failed to clean up temp directory: {str(cleanup_error)}")
+                    except:
+                        pass
                 
-                # Send a message about the conversion quality
-                # Just send a simple success message regardless of conversion method
-                bot.send_message(call.message.chat.id, "✅ Word document converted to PDF successfully")
-                
-                # Confirm file deletion for security
+                cleanup_failed_file(file_path)
                 bot.send_message(call.message.chat.id, LANG[lang]['files_deleted'])
                 
-                # Securely delete the original file immediately
-                if os.path.exists(file_path):
-                    try:
-                        os.remove(file_path)
-                        logger.info(f"Original file deleted after processing: {file_path}")
-                    except Exception as e:
-                        logger.error(f"Failed to delete original file {file_path}: {str(e)}")
-                
             except Exception as e:
-                logger.error(f"Word to PDF conversion error: {str(e)}")
-                bot.send_message(call.message.chat.id, f"❌ Conversion failed: {str(e)}")
+                logger.error(f"Word to PDF error: {str(e)}")
+                cleanup_failed_file(file_path)
+                send_error_with_restart(call.message.chat.id, LANG[lang]['pdf_conversion_failed'], lang)
         
         # We've already deleted the original file in each conversion handler
         # This is just a safety check to make sure it's gone
@@ -1517,8 +1645,8 @@ def callback_handler(call):
             pass
         
     except Exception as e:
-        logger.error(f"Error for user {user_id}: {str(e)}", exc_info=True)
-        bot.answer_callback_query(call.id, f"❌ Error: {str(e)}")
+        logger.error(f"Callback handler error for user {user_id}: {str(e)}", exc_info=True)
+        logger.error(f"Error details: {type(e).__name__}: {str(e)}")
         
         # Clean up any temporary files that might have been created
         for temp_file in temp_files:
@@ -1528,9 +1656,20 @@ def callback_handler(call):
                     logger.info(f"Cleaned up temp file after error: {temp_file}")
             except Exception as cleanup_error:
                 logger.error(f"Failed to clean up temp file {temp_file}: {str(cleanup_error)}")
+        
+        # Clean up original file if it exists
+        try:
+            if 'file_path' in locals():
+                cleanup_failed_file(file_path)
+        except:
+            pass
                 
-        # Inform user about the error in a friendly way
-        bot.send_message(call.message.chat.id, "⚠️ Something went wrong. Your files are still secure and have been deleted. Please try again.")
+        # Send user-friendly error message with restart button
+        try:
+            bot.answer_callback_query(call.id, "Processing error")
+            send_error_with_restart(call.message.chat.id, LANG[lang]['oops_error'], lang)
+        except:
+            pass
 
 
 if __name__ == "__main__":

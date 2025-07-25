@@ -255,3 +255,89 @@ telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsucc
 2025-07-24 11:56:08,060 - INFO - User 923869729 (grndsard) clicked: 5_1
 2025-07-24 11:56:10,077 - INFO - Original file deleted after processing: files/231b0bf7-39ce-4505-b2e0-628aa104a884.pdf
 2025-07-24 11:58:44,065 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-25 08:28:25,497 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 08:28:25,526 - INFO - Database cleaned on startup
+2025-07-25 08:28:25,527 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 08:28:25,527 - CRITICAL - Invalid bot token format. Please check your token.
+2025-07-25 08:29:11,894 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 08:29:11,901 - INFO - Database cleaned on startup
+2025-07-25 08:29:11,902 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 08:29:18,193 - INFO - File encrypted successfully in 0.03 seconds
+2025-07-25 08:29:18,194 - INFO - File encrypted and saved in 0.03 seconds
+2025-07-25 08:29:19,270 - INFO - File securely stored: template_surat_rekomendasi_rbb2025.docx → 07e281b4-c779-4f54-a737-8f7a2da8cd91.docx
+2025-07-25 08:36:15,066 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 08:36:15,446 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-25 08:36:34,107 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 08:36:34,114 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 08:36:35,242 - INFO - File securely stored: KESELAMATAN DAN KESEHATAN KERJA DI LABORATORIUM PRINT.docx → 6b21086c-ec1d-426e-9209-3aa0f2aa8a51.docx
+2025-07-25 08:50:48,730 - INFO - Deleted old file: files/07e281b4-c779-4f54-a737-8f7a2da8cd91.docx
+2025-07-25 08:53:48,755 - INFO - Deleted old file: files/6b21086c-ec1d-426e-9209-3aa0f2aa8a51.docx
+2025-07-25 08:58:58,640 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 08:58:59,474 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-25 08:59:17,826 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 08:59:17,831 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 08:59:18,909 - INFO - File securely stored: JUSTIFIKASI_047_V_2023_Pengadaan_Kabel_Charger_Yusitania_dan_RIdwan.docx → a42a70ae-396c-41e2-9fc1-55147b086171.docx
+2025-07-25 09:08:47,506 - INFO - User 923869729 (grndsard) clicked: start_bot
+2025-07-25 09:14:00,296 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 09:14:00,316 - INFO - Database cleaned on startup
+2025-07-25 09:14:00,317 - INFO - Startup cleanup: Deleted files\a42a70ae-396c-41e2-9fc1-55147b086171.docx
+2025-07-25 09:14:00,318 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 09:14:11,134 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 09:14:12,021 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-25 09:14:26,877 - INFO - File encrypted successfully in 0.01 seconds
+2025-07-25 09:14:26,881 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 09:14:28,009 - INFO - File securely stored: JUSTIFIKASI_047_V_2023_Pengadaan_Kabel_Charger_Yusitania_dan_RIdwan.docx → 174fb130-19bb-4ab0-9609-41a345f80fee.docx
+2025-07-25 09:14:41,298 - INFO - User 923869729 (grndsard) clicked: 9_1
+2025-07-25 09:14:42,055 - INFO - File decrypted successfully with AES in 0.01 seconds
+2025-07-25 09:14:48,859 - WARNING - docx2pdf failed: Word.Application.Quit
+2025-07-25 09:14:51,684 - INFO - Cleaned up failed file: files/174fb130-19bb-4ab0-9609-41a345f80fee.docx
+2025-07-25 09:15:12,522 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-25 09:15:14,680 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 09:15:15,633 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-25 09:15:26,477 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 09:15:26,483 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 09:15:27,711 - INFO - File securely stored: Format Uraian Pekerjaan.xlsx → f5dcc92b-abda-4928-ac01-b2549de2195c.xlsx
+2025-07-25 09:15:32,959 - INFO - User 923869729 (grndsard) clicked: 9_2
+2025-07-25 09:15:33,371 - ERROR - Error updating countdown: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message to edit not found
+2025-07-25 09:15:33,374 - ERROR - Error in check_session: 923869729
+2025-07-25 09:15:33,720 - INFO - File decrypted successfully with AES in 0.00 seconds
+2025-07-25 09:15:35,951 - WARNING - docx2pdf failed: (-2147352567, 'Exception occurred.', (0, 'Microsoft Word', 'The file appears to be corrupted.', 'wdmain11.chm', 25272, -2146822496), None)
+2025-07-25 09:15:35,964 - ERROR - Word to PDF error: file 'C:\Users\Grandis\AppData\Local\Temp\rupaganti_un1k_i5p\input_2.docx' is not a Word file, content type is 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml'
+2025-07-25 09:15:35,965 - INFO - Cleaned up failed file: files/f5dcc92b-abda-4928-ac01-b2549de2195c.xlsx
+2025-07-25 09:15:51,557 - INFO - User 923869729 (grndsard) clicked: no_thanks
+2025-07-25 09:15:54,313 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 09:15:54,716 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-25 09:16:05,942 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 09:16:05,946 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 09:16:07,040 - INFO - File securely stored: 1. Berita Acara Serah Terima Pekerjaan.doc → d8b7b511-dc7c-4113-ae9d-efca01aa2c3e.doc
+2025-07-25 09:18:10,093 - INFO - Deleted expired file: files/d8b7b511-dc7c-4113-ae9d-efca01aa2c3e.doc
+2025-07-25 09:22:38,026 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 09:22:38,031 - INFO - Database cleaned on startup
+2025-07-25 09:22:38,031 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 09:22:46,557 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 09:22:47,375 - INFO - Welcome message sent to user 923869729 in en language
+2025-07-25 09:23:20,728 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 09:23:20,730 - INFO - File encrypted and saved in 0.00 seconds
+2025-07-25 09:23:21,760 - INFO - File securely stored: WhatsApp Image 2024-07-19 at 13.54.04.jpeg → 3b39b801-4486-428a-b223-5a4d5c8b771c.jpeg
+2025-07-25 09:23:23,495 - INFO - Cleaned up failed file: files/3b39b801-4486-428a-b223-5a4d5c8b771c.jpeg
+2025-07-25 09:27:47,833 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 09:27:47,837 - INFO - Database cleaned on startup
+2025-07-25 09:27:47,838 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 09:27:51,256 - INFO - User 923869729 (grndsard) clicked: start_bot
+2025-07-25 09:28:16,808 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 09:28:16,811 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 09:28:17,877 - INFO - File securely stored: image_2024-10-28_10-23-09.png → e3c9d572-56cc-43ab-8ec0-efda773140a0.png
+2025-07-25 09:28:34,078 - INFO - User 923869729 (grndsard) clicked: 1_1
+2025-07-25 09:28:35,180 - INFO - File decrypted successfully with AES in 0.00 seconds
+2025-07-25 09:28:36,912 - INFO - Original file deleted after processing: files/e3c9d572-56cc-43ab-8ec0-efda773140a0.png
+2025-07-25 09:28:45,172 - INFO - User 923869729 (grndsard) clicked: yes_more
+2025-07-25 09:28:55,956 - INFO - File encrypted successfully in 0.00 seconds
+2025-07-25 09:28:55,958 - INFO - File encrypted and saved in 0.00 seconds
+2025-07-25 09:28:56,998 - INFO - File securely stored: NB PRogress.xlsx → 4830429e-d381-43c6-92d2-5522a7827417.xlsx
+2025-07-25 09:29:04,740 - INFO - User 923869729 (grndsard) clicked: compress_zip_2
+2025-07-25 09:29:05,575 - INFO - File decrypted successfully with AES in 0.01 seconds
+2025-07-25 09:29:07,054 - INFO - Original file deleted after processing: files/4830429e-d381-43c6-92d2-5522a7827417.xlsx
+2025-07-25 09:29:10,654 - INFO - User 923869729 (grndsard) clicked: yes_more
+2025-07-25 09:34:32,572 - INFO - User 923869729 (grndsard) clicked: cancel_2
+2025-07-25 09:34:32,930 - ERROR - Failed to read or decrypt file files/4830429e-d381-43c6-92d2-5522a7827417.xlsx: [Errno 2] No such file or directory: 'files/4830429e-d381-43c6-92d2-5522a7827417.xlsx'
+2025-07-25 09:34:39,763 - INFO - User 923869729 (grndsard) clicked: start_bot
