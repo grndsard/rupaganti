@@ -161,6 +161,10 @@ LANG = {
     },
     'id': {
         'welcome': "🎉 Hai! Saya **RupaGanti** by Grands — saya bisa membantu mengkonversi atau mengompres file Anda!\n\n✨ Yang bisa saya lakukan:\n📸 **Gambar**: JPG ↔ PNG ↔ WebP ↔ BMP\n📄 **Dokumen**: Kompresi PDF\n🎵 **Audio**: MP3, WAV, FLAC\n🎬 **Video**: MP4, AVI, MOV\n🗜️ **Kompres**: Kurangi ukuran file\n\nKirim file dan saya akan tunjukkan pilihan! 🚀",
+        'first_welcome': '👋 Selamat datang di RupaGanti by Grands!\n\nSaya dapat membantu Anda mengkonversi atau mengompres file dengan aman 🔐✨\n\nKetuk tombol di bawah untuk memulai 👇',
+        'start_button': '🔁 Mulai',
+        'inactivity_reminder': '👀 Apakah Anda masih di sana?\nBeri tahu saya jika Anda masih membutuhkan bantuan!',
+        'inactivity_close': '⏳ Sesi ditutup karena tidak aktif.\n\nJika Anda ingin menggunakan bot lagi, cukup ketuk tombol di bawah 👇',
         'convert_jpg': '📷 Konversi ke JPG',
         'convert_png': '🖼️ Konversi ke PNG',
         'convert_webp': '🌐 Konversi ke WebP',
@@ -175,10 +179,47 @@ LANG = {
         'no_thanks': '❌ Tidak, Terima Kasih!',
         'goodbye': '👋 Terima kasih telah menggunakan RupaGanti! Ketik /start kapan saja untuk menggunakan saya lagi.',
         'ready_next': '📁 Siap untuk file berikutnya! Kirim saja ke saya.',
-        'audio_failed': '❌ Ekstraksi audio gagal, tapi saya masih di sini untuk membantu!'
+        'audio_failed': '❌ Ekstraksi audio gagal, tapi saya masih di sini untuk membantu!',
+        'encrypting': '🔐 Mengenkripsi file Anda dengan aman...',
+        'encryption_complete': '✅ File berhasil dienkripsi dalam {:.2f} detik.',
+        'compressing': '📉 Mengompres file Anda...',
+        'cleaning': '🧹 Membersihkan untuk keamanan...',
+        'session_expired': '⏱️ Sesi berakhir untuk keamanan Anda. File telah dihapus.',
+        'start_over': '🔁 Mulai Lagi',
+        'countdown': '⏳ {}:{:02d} tersisa',
+        'compression_result': '✅ Kompresi berhasil: {:.1f} MB → {:.1f} MB',
+        'already_optimized': '⚠️ File ini sudah dioptimalkan dan tidak dapat dikompres lebih lanjut tanpa kehilangan kualitas.',
+        'files_deleted': '🗑️ Semua file telah dihapus dengan aman untuk melindungi data Anda.',
+        'file_received': 'diterima!\n\nPilih apa yang ingin Anda lakukan:',
+        'error_processing': '❌ Maaf, ada masalah saat memproses file Anda.',
+        'error_upload': '❌ Upload file gagal. Silakan coba upload file Anda lagi.',
+        'error_general': '❌ Ada yang salah. Silakan coba lagi.',
+        'back_to_start': '🔁 Kembali ke Awal',
+        'try_again': 'Silakan coba upload file Anda lagi atau hubungi dukungan jika masalah berlanjut.',
+        'convert_to_pdf': '📄 Konversi ke PDF',
+        'what_to_do': 'Apa yang ingin Anda lakukan?',
+        'file_ready': '🎉 Selesai! File Anda siap. Unduh di bawah 👇',
+        'security_reminder': '🔒 File Anda dienkripsi dan akan dihapus dalam 2 menit jika tidak diproses — data Anda tetap aman!',
+        'oops_error': '⚠️ Ups! Ada yang salah. Silakan coba lagi atau mulai ulang.',
+        'converting_to_pdf': '📄 Mengkonversi ke PDF...',
+        'pdf_conversion_success': '✅ Dokumen Word berhasil dikonversi ke PDF!',
+        'pdf_conversion_failed': '❌ Konversi PDF gagal. Silakan coba lagi dengan file yang berbeda.',
+        'unsupported_format': '⚠️ Format file tidak didukung. Silakan upload salah satu jenis yang didukung:\nGambar: JPG, PNG, WebP, BMP, dll.\nDokumen: DOCX, XLSX, PPTX, PDF, dll.\nAudio/Video: MP3, MP4, AVI, dll.',
+        'convert_document': '📄 Konversi ke PDF',
+        'compress_document': '🗜️ Kompres ke ZIP',
+        'image_options': 'Apa yang ingin Anda lakukan dengan gambar Anda?',
+        'document_options': 'Apa yang ingin Anda lakukan dengan dokumen Anda?',
+        'media_options': 'Apa yang ingin Anda lakukan dengan file media Anda?',
+        'convert_to_mp4': '🎬 Konversi ke MP4',
+        'convert_to_mp3': '🎵 Konversi ke MP3',
+        'cancel': '❌ Batal'
     },
     'ar': {
         'welcome': "🎉 مرحبا! أنا **RupaGanti** من Grands — يمكنني مساعدتك في تحويل أو ضغط ملفاتك!\n\n✨ ما يمكنني فعله:\n📸 **الصور**: JPG ↔ PNG ↔ WebP ↔ BMP\n📄 **المستندات**: ضغط PDF\n🎵 **الصوت**: MP3, WAV, FLAC\n🎬 **الفيديو**: MP4, AVI, MOV\n🗜️ **الضغط**: تقليل حجم الملف\n\nأرسل لي ملفاً وسأعرض عليك الخيارات! 🚀",
+        'first_welcome': '👋 مرحباً بك في RupaGanti by Grands!\n\nيمكنني مساعدتك في تحويل أو ضغط ملفاتك بأمان 🔐✨\n\nاضغط على الزر أدناه للبدء 👇',
+        'start_button': '🔁 ابدأ',
+        'inactivity_reminder': '👀 هل ما زلت هناك؟\nأخبرني إذا كنت لا تزال بحاجة إلى مساعدة!',
+        'inactivity_close': '⏳ تم إغلاق الجلسة بسبب عدم النشاط.\n\nإذا كنت تريد استخدام البوت مرة أخرى، فقط اضغط على الزر أدناه 👇',
         'convert_jpg': '📷 تحويل إلى JPG',
         'convert_png': '🖼️ تحويل إلى PNG',
         'convert_webp': '🌐 تحويل إلى WebP',
@@ -193,10 +234,47 @@ LANG = {
         'no_thanks': '❌ لا، شكراً!',
         'goodbye': '👋 شكراً لاستخدام RupaGanti! اكتب /start في أي وقت لاستخدامي مرة أخرى.',
         'ready_next': '📁 جاهز لملفك التالي! أرسله لي فقط.',
-        'audio_failed': '❌ فشل استخراج الصوت، لكنني ما زلت هنا للمساعدة!'
+        'audio_failed': '❌ فشل استخراج الصوت، لكنني ما زلت هنا للمساعدة!',
+        'encrypting': '🔐 تشفير ملفك بأمان...',
+        'encryption_complete': '✅ تم تشفير الملف بنجاح في {:.2f} ثانية.',
+        'compressing': '📉 ضغط ملفك...',
+        'cleaning': '🧹 التنظيف للأمان...',
+        'session_expired': '⏱️ انتهت الجلسة لأمانك. تم حذف الملف.',
+        'start_over': '🔁 ابدأ من جديد',
+        'countdown': '⏳ {}:{:02d} متبقي',
+        'compression_result': '✅ نجح الضغط: {:.1f} ميجابايت → {:.1f} ميجابايت',
+        'already_optimized': '⚠️ هذا الملف محسّن بالفعل ولا يمكن ضغطه أكثر دون فقدان الجودة.',
+        'files_deleted': '🗑️ تم حذف جميع الملفات بأمان لحماية بياناتك.',
+        'file_received': 'تم الاستلام!\n\nاختر ما تريد فعله:',
+        'error_processing': '❌ عذراً، هناك مشكلة في معالجة ملفك.',
+        'error_upload': '❌ فشل رفع الملف. يرجى المحاولة مرة أخرى.',
+        'error_general': '❌ حدث خطأ. يرجى المحاولة مرة أخرى.',
+        'back_to_start': '🔁 العودة للبداية',
+        'try_again': 'يرجى المحاولة مرة أخرى أو الاتصال بالدعم إذا استمرت المشكلة.',
+        'convert_to_pdf': '📄 تحويل إلى PDF',
+        'what_to_do': 'ماذا تريد أن تفعل؟',
+        'file_ready': '🎉 تم! ملفك جاهز. حمّل من أدناه 👇',
+        'security_reminder': '🔒 ملفاتك مشفرة وسيتم حذفها خلال دقيقتين إذا لم تتم معالجتها — بياناتك آمنة!',
+        'oops_error': '⚠️ عفواً! حدث خطأ. يرجى المحاولة مرة أخرى أو البدء من جديد.',
+        'converting_to_pdf': '📄 تحويل إلى PDF...',
+        'pdf_conversion_success': '✅ تم تحويل مستند Word إلى PDF بنجاح!',
+        'pdf_conversion_failed': '❌ فشل تحويل PDF. يرجى المحاولة مع ملف مختلف.',
+        'unsupported_format': '⚠️ صيغة ملف غير مدعومة. يرجى رفع أحد الأنواع المدعومة:\nالصور: JPG, PNG, WebP, BMP, إلخ.\nالمستندات: DOCX, XLSX, PPTX, PDF, إلخ.\nالصوت/الفيديو: MP3, MP4, AVI, إلخ.',
+        'convert_document': '📄 تحويل إلى PDF',
+        'compress_document': '🗜️ ضغط إلى ZIP',
+        'image_options': 'ماذا تريد أن تفعل بصورتك؟',
+        'document_options': 'ماذا تريد أن تفعل بمستندك؟',
+        'media_options': 'ماذا تريد أن تفعل بملف الوسائط؟',
+        'convert_to_mp4': '🎬 تحويل إلى MP4',
+        'convert_to_mp3': '🎵 تحويل إلى MP3',
+        'cancel': '❌ إلغاء'
     },
     'jv': {
         'welcome': "🎉 Halo! Aku **RupaGanti** saka Grands — aku bisa ngewangi ngowahi utawa ngompres file sampeyan!\n\n✨ Sing bisa tak lakoni:\n📸 **Gambar**: JPG ↔ PNG ↔ WebP ↔ BMP\n📄 **Dokumen**: Kompresi PDF\n🎵 **Audio**: MP3, WAV, FLAC\n🎬 **Video**: MP4, AVI, MOV\n🗜️ **Kompres**: Ngurangi ukuran file\n\nKirimno file lan tak tuduhno pilihane! 🚀",
+        'first_welcome': '👋 Sugeng rawuh ing RupaGanti by Grands!\n\nAku bisa ngewangi sampeyan ngowahi utawa ngompres file kanthi aman 🔐✨\n\nKlik tombol ing ngisor kanggo miwiti 👇',
+        'start_button': '🔁 Miwiti',
+        'inactivity_reminder': '👀 Sampeyan isih ana?\nKandha yen sampeyan isih butuh bantuan!',
+        'inactivity_close': '⏳ Sesi ditutup amarga ora aktif.\n\nYen sampeyan arep nggunakake bot maneh, klik tombol ing ngisor 👇',
         'convert_jpg': '📷 Owahi dadi JPG',
         'convert_png': '🖼️ Owahi dadi PNG',
         'convert_webp': '🌐 Owahi dadi WebP',
@@ -211,7 +289,40 @@ LANG = {
         'no_thanks': '❌ Ora, Matur Nuwun!',
         'goodbye': '👋 Matur nuwun wis nggunakake RupaGanti! Ketik /start kapan wae kanggo nggunakake aku maneh.',
         'ready_next': '📁 Siap kanggo file sabanjure! Kirimno wae marang aku.',
-        'audio_failed': '❌ Ekstraksi audio gagal, nanging aku isih kene kanggo ngewangi!'
+        'audio_failed': '❌ Ekstraksi audio gagal, nanging aku isih kene kanggo ngewangi!',
+        'encrypting': '🔐 Ngenkripsi file sampeyan kanthi aman...',
+        'encryption_complete': '✅ File kasil dienkripsi sajrone {:.2f} detik.',
+        'compressing': '📉 Ngompres file sampeyan...',
+        'cleaning': '🧹 Ngresiki kanggo keamanan...',
+        'session_expired': '⏱️ Sesi rampung kanggo keamanan sampeyan. File wis dibusak.',
+        'start_over': '🔁 Miwiti Maneh',
+        'countdown': '⏳ {}:{:02d} isih ana',
+        'compression_result': '✅ Kompresi kasil: {:.1f} MB → {:.1f} MB',
+        'already_optimized': '⚠️ File iki wis dioptimalake lan ora bisa dikompres maneh tanpa kelangan kualitas.',
+        'files_deleted': '🗑️ Kabeh file wis dibusak kanthi aman kanggo nglindhungi data sampeyan.',
+        'file_received': 'ditampa!\n\nPilih apa sing arep koklakoni:',
+        'error_processing': '❌ Nuwun sewu, ana masalah nalika ngolah file sampeyan.',
+        'error_upload': '❌ Upload file gagal. Coba upload file sampeyan maneh.',
+        'error_general': '❌ Ana sing salah. Coba maneh.',
+        'back_to_start': '🔁 Bali menyang Wiwitan',
+        'try_again': 'Coba upload file sampeyan maneh utawa hubungi dhukungan yen masalah terus.',
+        'convert_to_pdf': '📄 Owahi dadi PDF',
+        'what_to_do': 'Apa sing arep koklakoni?',
+        'file_ready': '🎉 Rampung! File sampeyan siap. Download ing ngisor 👇',
+        'security_reminder': '🔒 File sampeyan dienkripsi lan bakal dibusak sajrone 2 menit yen ora diproses — data sampeyan tetep aman!',
+        'oops_error': '⚠️ Aduh! Ana sing salah. Coba maneh utawa miwiti maneh.',
+        'converting_to_pdf': '📄 Ngowahi dadi PDF...',
+        'pdf_conversion_success': '✅ Dokumen Word kasil diowahi dadi PDF!',
+        'pdf_conversion_failed': '❌ Konversi PDF gagal. Coba maneh karo file liyane.',
+        'unsupported_format': '⚠️ Format file ora didukung. Upload salah siji jinis sing didukung:\nGambar: JPG, PNG, WebP, BMP, lsp.\nDokumen: DOCX, XLSX, PPTX, PDF, lsp.\nAudio/Video: MP3, MP4, AVI, lsp.',
+        'convert_document': '📄 Owahi dadi PDF',
+        'compress_document': '🗜️ Kompres dadi ZIP',
+        'image_options': 'Apa sing arep koklakoni karo gambar sampeyan?',
+        'document_options': 'Apa sing arep koklakonke karo dokumen sampeyan?',
+        'media_options': 'Apa sing arep koklakoni karo file media sampeyan?',
+        'convert_to_mp4': '🎬 Owahi dadi MP4',
+        'convert_to_mp3': '🎵 Owahi dadi MP3',
+        'cancel': '❌ Batal'
     }
 }
 
@@ -1047,6 +1158,17 @@ def callback_handler(call):
             # Redirect to ZIP compression (action 7)
             call.data = f"7_{db_id}"
         
+        # Handle video/audio conversion callbacks
+        elif call.data.startswith("video_mp4_"):
+            db_id = call.data.split('_')[2]
+            # Redirect to video conversion (action 10)
+            call.data = f"10_{db_id}"
+        
+        elif call.data.startswith("audio_mp3_"):
+            db_id = call.data.split('_')[2]
+            # Redirect to audio conversion (action 11)
+            call.data = f"11_{db_id}"
+        
         # Cancel session timer when user takes action
         if user_id in active_sessions:
             try:
@@ -1079,6 +1201,25 @@ def callback_handler(call):
             
         if '_' not in call.data:
             bot.answer_callback_query(call.id, "❌ Invalid action!")
+            return
+        
+        # Handle cancel action
+        if call.data.startswith("cancel_"):
+            db_id = call.data.split('_')[1]
+            # Clean up file
+            conn = sqlite3.connect('files.db')
+            cursor = conn.execute('SELECT file_path FROM files WHERE id = ?', (db_id,))
+            result = cursor.fetchone()
+            if result:
+                file_path = result[0]
+                cleanup_failed_file(file_path)
+                conn.execute('DELETE FROM files WHERE id = ?', (db_id,))
+                conn.commit()
+            conn.close()
+            
+            bot.edit_message_text("❌ Operation cancelled. File deleted for security.", 
+                                call.message.chat.id, call.message.message_id)
+            bot.answer_callback_query(call.id, "Cancelled")
             return
             
         action, db_id = call.data.split('_')
@@ -1123,77 +1264,140 @@ def callback_handler(call):
             return
         
         if action == "1":
-            img_io = BytesIO(file_data)
-            with Image.open(img_io) as img:
-                if img.mode == 'RGBA':
-                    img = img.convert('RGB')
-                output = BytesIO()
-                img.save(output, format='JPEG')
-                output.seek(0)
-                bot.send_document(call.message.chat.id, output, visible_file_name="converted.jpg")
+            try:
+                img_io = BytesIO(file_data)
+                with Image.open(img_io) as img:
+                    # Handle different image modes properly
+                    if img.mode in ('RGBA', 'LA', 'P'):
+                        # Create white background for transparency
+                        background = Image.new('RGB', img.size, (255, 255, 255))
+                        if img.mode == 'P':
+                            img = img.convert('RGBA')
+                        background.paste(img, mask=img.split()[-1] if img.mode in ('RGBA', 'LA') else None)
+                        img = background
+                    elif img.mode != 'RGB':
+                        img = img.convert('RGB')
+                    
+                    output = BytesIO()
+                    img.save(output, format='JPEG', quality=95, optimize=True)
+                    output.seek(0)
+                    bot.send_document(call.message.chat.id, output, visible_file_name="converted.jpg")
+            except Exception as e:
+                logger.error(f"JPG conversion error: {str(e)}")
+                bot.send_message(call.message.chat.id, f"❌ JPG conversion failed: {str(e)}")
         
         elif action == "2":
-            img_io = BytesIO(file_data)
-            with Image.open(img_io) as img:
-                output = BytesIO()
-                img.save(output, format='PNG')
-                output.seek(0)
-                bot.send_document(call.message.chat.id, output, visible_file_name="converted.png")
+            try:
+                img_io = BytesIO(file_data)
+                with Image.open(img_io) as img:
+                    # Ensure proper PNG format
+                    if img.mode not in ('RGBA', 'RGB', 'L', 'P'):
+                        img = img.convert('RGBA')
+                    
+                    output = BytesIO()
+                    img.save(output, format='PNG', optimize=True)
+                    output.seek(0)
+                    bot.send_document(call.message.chat.id, output, visible_file_name="converted.png")
+            except Exception as e:
+                logger.error(f"PNG conversion error: {str(e)}")
+                bot.send_message(call.message.chat.id, f"❌ PNG conversion failed: {str(e)}")
         
         elif action == "3":
-            img_io = BytesIO(file_data)
-            with Image.open(img_io) as img:
-                output = BytesIO()
-                img.save(output, format='WEBP')
-                output.seek(0)
-                bot.send_document(call.message.chat.id, output, visible_file_name="converted.webp")
+            try:
+                img_io = BytesIO(file_data)
+                with Image.open(img_io) as img:
+                    # WebP supports both RGB and RGBA
+                    if img.mode not in ('RGB', 'RGBA'):
+                        img = img.convert('RGB')
+                    
+                    output = BytesIO()
+                    img.save(output, format='WEBP', quality=95, method=6)
+                    output.seek(0)
+                    bot.send_document(call.message.chat.id, output, visible_file_name="converted.webp")
+            except Exception as e:
+                logger.error(f"WebP conversion error: {str(e)}")
+                bot.send_message(call.message.chat.id, f"❌ WebP conversion failed: {str(e)}")
         
         elif action == "4":
-            img_io = BytesIO(file_data)
-            with Image.open(img_io) as img:
-                if img.mode == 'RGBA':
-                    img = img.convert('RGB')
-                width, height = img.size
-                
-                # More aggressive compression to reach 50% target
-                new_size = (int(width * 0.6), int(height * 0.6))  # 60% of original dimensions
-                img = img.resize(new_size, Image.Resampling.LANCZOS)
-                
-                output = BytesIO()
-                # Try with quality=10 for better compression
-                img.save(output, format='JPEG', quality=10, optimize=True)
-                output.seek(0)
-                
-                # Calculate compression ratio
-                compressed_size = get_file_size_mb(output.getvalue())
-                ratio = calculate_compression_ratio(original_size, compressed_size)
-                
-                # If compression target not met but file is large enough, try more aggressive settings
-                if ratio < MIN_COMPRESSION_TARGET and width > 800 and height > 800:
-                    # Try more aggressive compression but maintain readability
+            try:
+                img_io = BytesIO(file_data)
+                with Image.open(img_io) as img:
+                    # Handle transparency properly
+                    if img.mode in ('RGBA', 'LA', 'P'):
+                        background = Image.new('RGB', img.size, (255, 255, 255))
+                        if img.mode == 'P':
+                            img = img.convert('RGBA')
+                        background.paste(img, mask=img.split()[-1] if img.mode in ('RGBA', 'LA') else None)
+                        img = background
+                    elif img.mode != 'RGB':
+                        img = img.convert('RGB')
+                    
+                    width, height = img.size
+                    
+                    # Smart compression based on image size
+                    if width * height > 2000000:  # Large image (>2MP)
+                        # Aggressive compression for large images
+                        new_size = (int(width * 0.5), int(height * 0.5))
+                        quality = 60
+                    elif width * height > 500000:  # Medium image (>0.5MP)
+                        # Moderate compression
+                        new_size = (int(width * 0.7), int(height * 0.7))
+                        quality = 70
+                    else:
+                        # Light compression for small images
+                        new_size = (int(width * 0.8), int(height * 0.8))
+                        quality = 80
+                    
+                    # Resize image
+                    img_resized = img.resize(new_size, Image.Resampling.LANCZOS)
+                    
                     output = BytesIO()
-                    new_size = (int(width * 0.5), int(height * 0.5))  # 50% of original dimensions
-                    img = img.resize(new_size, Image.Resampling.LANCZOS)
-                    img.save(output, format='JPEG', quality=15, optimize=True)  # Quality 15 for better readability
+                    img_resized.save(output, format='JPEG', quality=quality, optimize=True)
                     output.seek(0)
                     
-                    # Recalculate compression ratio
+                    # Calculate compression ratio
                     compressed_size = get_file_size_mb(output.getvalue())
                     ratio = calculate_compression_ratio(original_size, compressed_size)
-                
-                # Show appropriate message based on compression ratio
-                if ratio < 0.1:  # Less than 10% compression
-                    bot.send_message(call.message.chat.id, LANG[lang]['already_optimized'])
-                else:
-                    # Show compression result with file sizes
-                    bot.send_message(call.message.chat.id, 
-                                    LANG[lang]['compression_result'].format(original_size, compressed_size))
-                
-                # Send the compressed file
-                bot.send_document(call.message.chat.id, output, visible_file_name="compressed.jpg")
-                
-                # Confirm file deletion for security
-                bot.send_message(call.message.chat.id, LANG[lang]['files_deleted'])
+                    
+                    # If still not compressed enough, try more aggressive settings
+                    if ratio < MIN_COMPRESSION_TARGET and original_size > 1.0:  # Only for files > 1MB
+                        output = BytesIO()
+                        more_aggressive_size = (int(width * 0.4), int(height * 0.4))
+                        img_more_compressed = img.resize(more_aggressive_size, Image.Resampling.LANCZOS)
+                        img_more_compressed.save(output, format='JPEG', quality=50, optimize=True)
+                        output.seek(0)
+                        
+                        # Recalculate compression ratio
+                        new_compressed_size = get_file_size_mb(output.getvalue())
+                        new_ratio = calculate_compression_ratio(original_size, new_compressed_size)
+                        
+                        # Use the better compression if it's significantly better
+                        if new_ratio > ratio * 1.2:  # At least 20% better
+                            compressed_size = new_compressed_size
+                            ratio = new_ratio
+                        else:
+                            # Revert to previous compression
+                            output = BytesIO()
+                            img_resized.save(output, format='JPEG', quality=quality, optimize=True)
+                            output.seek(0)
+                    
+                    # Show appropriate message based on compression ratio
+                    if ratio < 0.1:  # Less than 10% compression
+                        bot.send_message(call.message.chat.id, LANG[lang]['already_optimized'])
+                    else:
+                        # Show compression result with file sizes
+                        bot.send_message(call.message.chat.id, 
+                                        LANG[lang]['compression_result'].format(original_size, compressed_size))
+                    
+                    # Send the compressed file
+                    bot.send_document(call.message.chat.id, output, visible_file_name="compressed.jpg")
+                    
+                    # Confirm file deletion for security
+                    bot.send_message(call.message.chat.id, LANG[lang]['files_deleted'])
+                    
+            except Exception as e:
+                logger.error(f"Image compression error: {str(e)}")
+                bot.send_message(call.message.chat.id, f"❌ Image compression failed: {str(e)}")
         
         elif action == "5":
             try:
@@ -1497,6 +1701,66 @@ def callback_handler(call):
             except Exception as e:
                 logger.error(f"PDF to Word conversion error: {str(e)}")
                 send_error_with_restart(call.message.chat.id, f"❌ PDF to Word conversion failed. {LANG[lang]['try_again']}", lang)
+        
+        # Video to MP4 conversion
+        elif action == "10":
+            try:
+                temp_input = f"temp/input_{db_id}_{int(time.time())}"
+                temp_output = f"temp/output_{db_id}_{int(time.time())}.mp4"
+                temp_files.extend([temp_input, temp_output])
+                
+                with open(temp_input, 'wb') as f:
+                    f.write(file_data)
+                
+                # Convert to MP4 using ffmpeg
+                subprocess.run(['ffmpeg', '-i', temp_input, '-c:v', 'libx264', '-c:a', 'aac', 
+                               '-preset', 'fast', '-crf', '23', temp_output], 
+                              check=True, capture_output=True)
+                
+                with open(temp_output, 'rb') as f:
+                    converted_data = f.read()
+                
+                output = BytesIO(converted_data)
+                bot.send_document(call.message.chat.id, output, visible_file_name="converted.mp4")
+                
+                # Clean up temp files
+                for temp_file in [temp_input, temp_output]:
+                    if os.path.exists(temp_file):
+                        os.remove(temp_file)
+                        
+            except Exception as e:
+                logger.error(f"Video conversion error: {str(e)}")
+                bot.send_message(call.message.chat.id, f"❌ Video conversion failed. FFmpeg may not be installed.")
+        
+        # Audio to MP3 conversion
+        elif action == "11":
+            try:
+                temp_input = f"temp/input_{db_id}_{int(time.time())}"
+                temp_output = f"temp/output_{db_id}_{int(time.time())}.mp3"
+                temp_files.extend([temp_input, temp_output])
+                
+                with open(temp_input, 'wb') as f:
+                    f.write(file_data)
+                
+                # Convert to MP3 using ffmpeg
+                subprocess.run(['ffmpeg', '-i', temp_input, '-c:a', 'libmp3lame', 
+                               '-b:a', '192k', temp_output], 
+                              check=True, capture_output=True)
+                
+                with open(temp_output, 'rb') as f:
+                    converted_data = f.read()
+                
+                output = BytesIO(converted_data)
+                bot.send_audio(call.message.chat.id, output, title="Converted Audio")
+                
+                # Clean up temp files
+                for temp_file in [temp_input, temp_output]:
+                    if os.path.exists(temp_file):
+                        os.remove(temp_file)
+                        
+            except Exception as e:
+                logger.error(f"Audio conversion error: {str(e)}")
+                bot.send_message(call.message.chat.id, f"❌ Audio conversion failed. FFmpeg may not be installed.")
         
         # Word to PDF conversion
         elif action == "9":

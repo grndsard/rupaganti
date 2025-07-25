@@ -341,3 +341,74 @@ telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsucc
 2025-07-25 09:34:32,572 - INFO - User 923869729 (grndsard) clicked: cancel_2
 2025-07-25 09:34:32,930 - ERROR - Failed to read or decrypt file files/4830429e-d381-43c6-92d2-5522a7827417.xlsx: [Errno 2] No such file or directory: 'files/4830429e-d381-43c6-92d2-5522a7827417.xlsx'
 2025-07-25 09:34:39,763 - INFO - User 923869729 (grndsard) clicked: start_bot
+2025-07-25 16:25:33,197 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 16:25:33,206 - INFO - Database cleaned on startup
+2025-07-25 16:25:33,207 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 16:25:51,219 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 16:25:52,029 - INFO - Welcome message sent to user 923869729 in id language
+2025-07-25 16:26:01,410 - ERROR - File handling error for user 923869729: 'encrypting'
+2025-07-25 16:26:02,419 - CRITICAL - Bot crashed: 'error_upload'
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 859, in handle_file
+    status_msg = bot.send_message(message.chat.id, LANG[lang]['encrypting'])
+                                                   ~~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'encrypting'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 1869, in <module>
+    bot.polling(none_stop=True, interval=1, timeout=20)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1043, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1118, in __threaded_polling
+    raise e
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 1074, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Python311\Lib\site-packages\telebot\util.py", line 147, in raise_exceptions
+    raise self.exception_info
+  File "C:\Python311\Lib\site-packages\telebot\util.py", line 90, in run
+    task(*args, **kwargs)
+  File "C:\Python311\Lib\site-packages\telebot\__init__.py", line 6801, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Datenordner\Datenprogrammierung\rupaganti\rupaganti_bot.py", line 1018, in handle_file
+    send_error_with_restart(message.chat.id, LANG[lang]['error_upload'], lang)
+                                             ~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'error_upload'
+2025-07-25 16:27:18,288 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 16:27:18,292 - INFO - Database cleaned on startup
+2025-07-25 16:27:18,293 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 16:27:23,216 - INFO - User 923869729 (grndsard) started the bot
+2025-07-25 16:27:23,945 - INFO - Welcome message sent to user 923869729 in id language
+2025-07-25 16:27:53,460 - INFO - File encrypted successfully in 0.03 seconds
+2025-07-25 16:27:53,463 - INFO - File encrypted and saved in 0.04 seconds
+2025-07-25 16:27:54,111 - ERROR - Encryption failed: 'encryption_complete'
+2025-07-25 16:27:54,123 - INFO - File encrypted successfully in 0.01 seconds
+2025-07-25 16:27:54,143 - INFO - File securely stored: Update Pricelist Gadget Terbaru Kisel.pdf → c58a9629-84f2-47d1-8f62-5a2a583eaac5.pdf
+2025-07-25 16:27:55,512 - ERROR - File handling error for user 923869729: 'document_options'
+2025-07-25 16:27:55,514 - INFO - Cleaned up failed file: files/c58a9629-84f2-47d1-8f62-5a2a583eaac5.pdf
+2025-07-25 16:27:55,514 - ERROR - Error sending error message: 'back_to_start'
+2025-07-25 16:30:02,720 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 16:30:02,734 - INFO - Database cleaned on startup
+2025-07-25 16:30:02,735 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 16:30:29,409 - INFO - File encrypted successfully in 0.02 seconds
+2025-07-25 16:30:29,411 - INFO - File encrypted and saved in 0.02 seconds
+2025-07-25 16:30:30,431 - INFO - File securely stored: Update Pricelist Gadget Terbaru Kisel.pdf → f0e184fb-0f5a-435b-9f3b-d24c215cf1ba.pdf
+2025-07-25 16:30:31,845 - ERROR - File handling error for user 923869729: 'cancel'
+2025-07-25 16:30:31,845 - INFO - Cleaned up failed file: files/f0e184fb-0f5a-435b-9f3b-d24c215cf1ba.pdf
+2025-07-25 16:30:31,845 - ERROR - Error sending error message: 'try_again'
+2025-07-25 16:32:06,374 - INFO - Secure RupaGanti Bot starting with enhanced AES-256 with hardware acceleration encryption...
+2025-07-25 16:32:06,387 - INFO - Database cleaned on startup
+2025-07-25 16:32:06,387 - INFO - Initial cleanup completed - all previous files deleted
+2025-07-25 16:32:16,951 - INFO - File encrypted successfully in 0.01 seconds
+2025-07-25 16:32:16,952 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 16:32:18,070 - INFO - File securely stored: Pricelist depok.pdf → ba222ba4-2923-4792-a2ca-8c5401a69101.pdf
+2025-07-25 16:32:19,451 - ERROR - File handling error for user 923869729: 'cancel'
+2025-07-25 16:32:19,452 - INFO - Cleaned up failed file: files/ba222ba4-2923-4792-a2ca-8c5401a69101.pdf
+2025-07-25 16:32:29,736 - INFO - User 923869729 (grndsard) clicked: start_bot
+2025-07-25 16:33:01,265 - INFO - File encrypted successfully in 0.01 seconds
+2025-07-25 16:33:01,267 - INFO - File encrypted and saved in 0.01 seconds
+2025-07-25 16:33:02,320 - INFO - File securely stored: Update Pricelist Gadget Terbaru Kisel.pdf → 64f5c258-cb8e-487a-80bc-875c142b2371.pdf
+2025-07-25 16:33:03,685 - ERROR - File handling error for user 923869729: 'cancel'
+2025-07-25 16:33:03,686 - INFO - Cleaned up failed file: files/64f5c258-cb8e-487a-80bc-875c142b2371.pdf
